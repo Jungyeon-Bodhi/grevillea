@@ -7,4 +7,5 @@ The 'data_preprocessing.py' file handles data preprocessing tasks, including dat
 The 'bodhi_pipeline.py' file performs data analysis for this project. It runs statistical tests and creates descriptive statistics and visualisations for each indicator and social demographic.
 
 Before running the data preprocessing script, please place the raw survey dataset in the "\data" folder.
+
 Before running the data analysis script, please place the cleaned survey dataset in the "\data" folder.
