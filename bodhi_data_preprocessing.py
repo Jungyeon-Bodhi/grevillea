@@ -298,7 +298,7 @@ class Preprocessing:
             (df['48'] == "Agree") & (df['52'] == "Agree") & (df['53'] == "Completely agree")]
         labels = [1, 2, 3, 4, 5, 6]
         df['212b'] = np.select(conditions, labels, default=7)
-        df['212b_label'] = np.where(pd.isna(df['212b']),np.nan,np.where(df['212b'] == 1, 'Adequate', 'Inadequate'))
+        df['212b_label'] = np.where(pd.isna(df['212b']), np.nan, np.where(df['212b'].isin([1, 2, 3, 4, 5, 6]), 'Adequate', 'Inadequate'))
         self.df = df
         
     def mental_health(self):

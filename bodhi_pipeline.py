@@ -133,7 +133,7 @@ def statistics(df, indicators):
                             "Completely disagree","Prefer not to answer"])
     indicators.append(i_212b_3)
     
-    mental_health = bd.Indicator(df, "Mental health", 0, ['mental_health'], i_cal=None, i_type='count', description="% of Psychosocial Resilience", period='endline', target = None)
+    mental_health = bd.Indicator(df, "Mental health", 0, ['mental_health'], i_cal=None, i_type='count', description="Percentage of people who demonstrated an adequate level of psychosocial resilience", period='endline', target = None)
     mental_health.add_breakdown({'2':'Gender', '3':'Province', '8':'Age Group'})
     mental_health.add_var_order(['Adequate', "Inadequate"])
     indicators.append(mental_health)
