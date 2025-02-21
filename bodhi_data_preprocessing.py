@@ -295,10 +295,12 @@ class Preprocessing:
             (df['52'] == "Agree") & (df['48'] == "Completely agree") & (df['53'] == "Completely agree"),
             (df['53'] == "Agree") & (df['48'] == "Completely agree") & (df['52'] == "Completely agree"),
             (df['52'] == "Agree") & (df['53'] == "Agree") & (df['48'] == "Completely agree"),
-            (df['48'] == "Agree") & (df['52'] == "Agree") & (df['53'] == "Completely agree")]
-        labels = [1, 2, 3, 4, 5, 6]
-        df['212b'] = np.select(conditions, labels, default=7)
-        df['212b_label'] = np.where(pd.isna(df['212b']), np.nan, np.where(df['212b'].isin([1, 2, 3, 4, 5, 6]), 'Adequate', 'Inadequate'))
+            (df['48'] == "Agree") & (df['52'] == "Agree") & (df['53'] == "Completely agree"),
+            (df['48'] == "Agree") & (df['52'] == "Completely agree") & (df['53'] == "Agree"),
+            (df['48'] == "Agree") & (df['52'] == "Agree") & (df['53'] == "Agree")]
+        labels = [1, 2, 3, 4, 5, 6, 7, 8]
+        df['212b'] = np.select(conditions, labels, default=9)
+        df['212b_label'] = np.where(pd.isna(df['212b']), np.nan, np.where(df['212b'].isin([1, 2, 3, 4, 5, 6, 7, 8]), 'Adequate', 'Inadequate'))
         self.df = df
         
     def mental_health(self):
