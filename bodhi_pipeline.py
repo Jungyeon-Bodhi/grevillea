@@ -109,7 +109,7 @@ def statistics(df, indicators):
                                "Other"])
     indicators.append(remaining_needs)
     
-    i_212b = bd.Indicator(df, "Indicator 212b", 0, ['212b_label'], i_cal=None, i_type='Percentage', description="Percentage of young people involved in the project who report having the capacity and means to positively influence their communities", period='endline', target = 70)
+    i_212b = bd.Indicator(df_youth, "Indicator 212b", 0, ['212b_label'], i_cal=None, i_type='Percentage', description="Percentage of young people involved in the project who report having the capacity and means to positively influence their communities", period='endline', target = 70)
     i_212b.add_baseline(41)
     i_212b.add_breakdown({'2':'Gender', '3':'Province', '8':'Age Group'})
     i_212b.add_var_order(['Adequate', "Inadequate"])
